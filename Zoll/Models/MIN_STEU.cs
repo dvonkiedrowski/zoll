@@ -15,7 +15,7 @@ namespace Zoll
         public int HAN_STEUER_KZ { get; set; }
 
         [StringLength(30)]
-        public string BEZEICHNUNG { get; set; }
+        public string BEZ { get; set; }
 
         [Column(TypeName = "numeric")]
         public decimal BETRAG_TO { get; set; }

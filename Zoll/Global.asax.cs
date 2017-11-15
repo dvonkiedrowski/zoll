@@ -1,12 +1,10 @@
 ﻿using AutoMapper;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Zoll.Dtos.Base;
 
 namespace Zoll
 {
@@ -17,6 +15,8 @@ namespace Zoll
             Mapper.Initialize(cfg => {
                 cfg.CreateMap<Zoll, ZollDto>();
                 cfg.CreateMap<ZollDto, Zoll>();
+                cfg.CreateMap<Filiale, BaseDtoWithName>();
+                cfg.CreateMap<Min_Steu, BaseDtoWithName>();
             });
 
             AreaRegistration.RegisterAllAreas();

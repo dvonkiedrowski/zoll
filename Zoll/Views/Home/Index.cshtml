@@ -1,21 +1,61 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-
-
-<div class="row" ng-controller="controller as $ctrl">
-    <div class="col-md-12">
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th>KU_NR</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="zoll in $ctrl.data">
-                    <td>{{zoll.KU_NR}}</td>
-                </tr>
-            </tbody>
-        </table>
+﻿<div ng-controller="controller as $ctrl">
+    <div class="row">
+        <div class="col-md-12">
+            <button ng-click="$ctrl.openModal({})" class="btn btn-primary">Neue Buchung</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>KU_NR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="zoll in $ctrl.data" ng-click="$ctrl.openModal(zoll)">
+                        <td>{{zoll.KU_NR}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
+
+<script type="text/ng-template" id="modalContent.html">
+    <form ng-submit="$ctrl.submit()">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">Zolleingang</h3>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <div class="row form-group">
+                <label for="liefDat" class="col-md-3 col-form-label">LIEF_DAT</label>
+                <div class="col-md-9 input-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="$ctrl.openDatepicker('liefDat')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                    <input id="liefDat" 
+                           type="text" 
+                           class="form-control" 
+                           uib-datepicker-popup="dd.MM.yyyy" 
+                           close-text="Schließen"
+                           clear-text="Leeren"
+                           current-text="Heute"
+                           ng-model="$ctrl.model.LIEF_DAT" 
+                           is-open="$ctrl.liefDat.opened" 
+                           ng-required="true" />
+                </div>
+            </div>
+            <div class="row form-group">
+                <label for="liefFil" class="col-md-3 col-form-label">LIEF_FIL</label>
+                <div class="col-md-9">
+                    <select class="form-control" ng-model="$ctrl.model.LIEF_FIL" ng-options="c.RECNUM as c.BEZ for c in $ctrl.dependencies.Filialen"></select>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Abbrechen</button>
+            <button class="btn btn-primary" type="submit">Buchen</button>
+        </div>
+    </form>
+</script>

@@ -15,11 +15,14 @@ namespace Zoll
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                        "~/Scripts/moment.min.js",
                         "~/Scripts/angular.min.js",
-                        "~/Scripts/angular.route.min.js",
+                        "~/Scripts/i18n/angular-locale_de-de.js",
                         "~/Scripts/angular-ui/ui-bootstrap.min.js",
+                        "~/Scripts/angular-ui/ui-bootstrap-tpls.min.js",
                         "~/Scripts/app/module.js",
-                        "~/Scripts/app/controller.js"));
+                        "~/Scripts/app/controller.js",
+                        "~/Scripts/app/modalController.js"));
 
             // Verwenden Sie die Entwicklungsversion von Modernizr zum Entwickeln und Erweitern Ihrer Kenntnisse. Wenn Sie dann
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
