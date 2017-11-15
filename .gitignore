@@ -1,0 +1,9 @@
+packages/
+obj/
+bin/
+Zoll.sln
+.vs/Zoll/v15/.suo
+App_Data/Zoll.mdf
+App_Data/Zoll_log.ldf
+Zoll.csproj.user
+.vs/
