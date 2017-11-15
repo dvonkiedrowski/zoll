@@ -14,6 +14,13 @@ namespace Zoll
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                        "~/Scripts/angular.min.js",
+                        "~/Scripts/angular.route.min.js",
+                        "~/Scripts/angular-ui/ui-bootstrap.min.js",
+                        "~/Scripts/app/module.js",
+                        "~/Scripts/app/controller.js"));
+
             // Verwenden Sie die Entwicklungsversion von Modernizr zum Entwickeln und Erweitern Ihrer Kenntnisse. Wenn Sie dann
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
