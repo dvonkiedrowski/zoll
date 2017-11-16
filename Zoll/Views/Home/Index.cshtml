@@ -16,7 +16,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr grid-item>
+                        <tr grid-item ng-click="$ctrl.openModal(item)">
                             <td ng-bind="item.LIEF_FIL_Ref.BEZ"></td>
                             <td ng-bind="item.LIEF_DAT | date:'dd.MM.yyyy'"></td>
                             <td ng-bind="item.LIEF_NR"></td>
