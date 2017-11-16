@@ -41,8 +41,11 @@ namespace Zoll
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/font-awesome.css",
                       "~/Content/ngFabForm/style.css",
                       "~/Content/data-grid/fixed-header.css",
+                      "~/Content/data-grid/angular-data-grid.bootstrap.css",
+                      "~/Content/data-grid/loading-bar.min.css",
                       "~/Content/site.css"));
         }
     }

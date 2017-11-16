@@ -204,6 +204,11 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\data-grid\angular-data-grid.bootstrap.css" />
+    <Content Include="Content\data-grid\fixed-header.css" />
+    <Content Include="Content\data-grid\loading-bar.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\ngFabForm\style.css">
       <DependentUpon>style.scss</DependentUpon>
     </Content>
@@ -212,6 +217,7 @@
     </Content>
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -248,10 +254,24 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.2.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\data-grid\dataGrid.js" />
+    <Content Include="Scripts\data-grid\dataGrid.min.js" />
+    <Content Include="Scripts\data-grid\dataGridUtils.js" />
+    <Content Include="Scripts\data-grid\dataGridUtils.min.js" />
+    <Content Include="Scripts\data-grid\JSONToCSVConvertor.js" />
+    <Content Include="Scripts\data-grid\loading-bar.js" />
+    <Content Include="Scripts\data-grid\loading-bar.min.js" />
+    <Content Include="Scripts\data-grid\pagination.js" />
+    <Content Include="Scripts\data-grid\pagination.min.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
     <Content Include="Scripts\i18n\angular-locale_af.js" />

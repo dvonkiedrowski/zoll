@@ -3,12 +3,15 @@
 
     angular.module('app').controller('controller', controller);
 
-    controller.$inject = ['$http', '$uibModal'];
+    controller.$inject = ['$http', '$uibModal', '$scope', '$filter'];
 
-    function controller($http, $uibModal) {
+    function controller($http, $uibModal, $scope, $filter) {
         var vm = this;
         vm.dependencies = [];
-        vm.data = [];
+        vm.gridOptions = {
+            data: [],
+            urlSync: true
+        };
 
         function activate() {
             $http.get('/api/Dependencies').then(function (result) {
@@ -16,7 +19,7 @@
             });
 
             $http.get('/api/Zoll').then(function (result) {
-                vm.data = result.data;
+                vm.gridOptions.data = result.data;
             });
         }
 
