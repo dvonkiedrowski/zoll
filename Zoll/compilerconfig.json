@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "Content/ngFabForm/_validation-msg.css",
+    "inputFile": "Content/ngFabForm/_validation-msg.scss"
+  },
+  {
+    "outputFile": "Content/ngFabForm/style.css",
+    "inputFile": "Content/ngFabForm/style.scss"
+  }
+]

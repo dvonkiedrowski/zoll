@@ -25,6 +25,7 @@
                 templateUrl: 'modalContent.html',
                 controller: 'modalController',
                 controllerAs: '$ctrl',
+                size: 'lg',
                 resolve: {
                     row: function () {
                         return row;
@@ -38,7 +39,6 @@
             modalInstance.result.then(function () {
                 activate();
             }, function () {
-
             });
         };
 

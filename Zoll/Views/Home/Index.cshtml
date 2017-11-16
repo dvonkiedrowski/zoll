@@ -29,33 +29,136 @@
         </div>
         <div class="modal-body" id="modal-body">
             <div class="row form-group">
+                <label for="liefFil" class="col-md-3 col-form-label">LIEF_FIL</label>
+                <div class="col-md-3">
+                    <select id="liefFil" class="form-control" required ng-model="$ctrl.model.LIEF_FIL" ng-options="c.RECNUM as c.BEZ for c in $ctrl.dependencies.Filialen"></select>
+                </div>
                 <label for="liefDat" class="col-md-3 col-form-label">LIEF_DAT</label>
-                <div class="col-md-9 input-group">
+                <div class="col-md-3 input-group">
                     <span class="input-group-btn">
                         <button type="button" class="btn btn-default" ng-click="$ctrl.openDatepicker('liefDat')"><i class="glyphicon glyphicon-calendar"></i></button>
                     </span>
-                    <input id="liefDat" 
-                           type="text" 
-                           class="form-control" 
-                           uib-datepicker-popup="dd.MM.yyyy" 
+                    <input id="liefDat"
+                           type="text"
+                           class="form-control"
+                           uib-datepicker-popup="dd.MM.yyyy"
                            close-text="Schließen"
                            clear-text="Leeren"
                            current-text="Heute"
-                           ng-model="$ctrl.model.LIEF_DAT" 
-                           is-open="$ctrl.liefDat.opened" 
+                           ng-model="$ctrl.model.LIEF_DAT"
+                           is-open="$ctrl.liefDat.opened"
                            ng-required="true" />
                 </div>
             </div>
             <div class="row form-group">
-                <label for="liefFil" class="col-md-3 col-form-label">LIEF_FIL</label>
-                <div class="col-md-9">
-                    <select class="form-control" ng-model="$ctrl.model.LIEF_FIL" ng-options="c.RECNUM as c.BEZ for c in $ctrl.dependencies.Filialen"></select>
+                <label for="liefNr" class="col-md-3 col-form-label">LIEF_NR</label>
+                <div class="col-md-3">
+                    <input id="liefNr" type="number" min="0" step="1" required class="form-control" ng-model="$ctrl.model.LIEF_NR" />
+                </div>
+                <label for="kuNr" class="col-md-3 col-form-label">KU_NR</label>
+                <div class="col-md-3">
+                    <input id="kuNr" type="number" min="0" step="1" required class="form-control" ng-model="$ctrl.model.KU_NR" />
+                </div>
+            </div>
+            <div class="row form-group">
+                <label for="kuTaLfdNr" class="col-md-3 col-form-label">KU_TA_LFD_NR</label>
+                <div class="col-md-3">
+                    <input id="kuTaLfdNr" type="number" min="0" step="1" required class="form-control" ng-model="$ctrl.model.KU_TA_LFD_NR" />
+                </div>
+                <label for="kuFlLfdNr" class="col-md-3 col-form-label">KU_FL_LFD_NR</label>
+                <div class="col-md-3">
+                    <input id="kuFlLfdNr" type="number" min="0" step="1" required class="form-control" ng-model="$ctrl.model.KU_FL_LFD_NR" />
+                </div>
+            </div>
+            <div class="row form-group">
+                <label for="rechDat" class="col-md-3 col-form-label">RECH_DAT</label>
+                <div class="col-md-3 input-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="$ctrl.openDatepicker('rechDat')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                    <input id="rechDat"
+                           type="text"
+                           class="form-control"
+                           uib-datepicker-popup="dd.MM.yyyy"
+                           close-text="Schließen"
+                           clear-text="Leeren"
+                           current-text="Heute"
+                           ng-model="$ctrl.model.RECH_DAT"
+                           is-open="$ctrl.rechDat.opened"
+                           ng-required="true" />
+                </div>
+                <label for="rechNr" class="col-md-3 col-form-label">RECH_NR</label>
+                <div class="col-md-3">
+                    <input id="rechNr" type="number" min="0" step="1" required class="form-control" ng-model="$ctrl.model.RECH_NR" />
+                </div>
+            </div>
+            <div class="row form-group">
+                <label for="minSteuKz" class="col-md-3 col-form-label">MIN_STEUER_KZ</label>
+                <div class="col-md-3">
+                    <select id="minSteuKz" class="form-control" required ng-model="$ctrl.model.MIN_STEUER_KZ" ng-options="c.RECNUM as c.BEZ for c in $ctrl.dependencies.Min_Steus"></select>
+                </div>
+                <label for="zollKz" class="col-md-3 col-form-label">ZOLL_KZ</label>
+                <div class="col-md-3">
+                    <input id="zollKz" type="text" required maxlength="2" class="form-control" ng-model="$ctrl.model.ZOLL_KZ" />
+                </div>
+            </div>
+            <div class="row form-group">
+                <label for="mngKgAusg" class="col-md-3 col-form-label">MNG_KG_AUSG</label>
+                <div class="col-md-3">
+                    <input id="mngKgAusg" type="number" min="0" step="0.01" required class="form-control" ng-model="$ctrl.model.MNG_KG_AUSG" />
+                </div>
+                <label for="lagerKz" class="col-md-3 col-form-label">LAGER_KZ</label>
+                <div class="col-md-3">
+                    <input id="lagerKz" type="number" min="0" step="1" required class="form-control" ng-model="$ctrl.model.LAGER_KZ" />
+                </div>
+            </div>
+            <div class="row form-group">
+                <label for="zollLiefKz" class="col-md-3 col-form-label">ZOLL_LIEF_KZ</label>
+                <div class="col-md-3">
+                    <input id="zollLiefKz" type="number" min="0" step="1" required class="form-control" ng-model="$ctrl.model.ZOLL_LIEF_KZ" />
+                </div>
+                <label for="cubewareKz" class="col-md-3 col-form-label">CUBEWARE_KZ</label>
+                <div class="col-md-3">
+                    <input id="cubewareKz" type="text" required maxlength="15" class="form-control" ng-model="$ctrl.model.CUBEWARE_KZ" />
+                </div>
+            </div>
+            <div class="row form-group">
+                <label for="angBen" class="col-md-3 col-form-label">ANG_BEN</label>
+                <div class="col-md-3">
+                    <input id="angBen" type="text" required maxlength="5" class="form-control" ng-model="$ctrl.model.ANG_BEN" />
+                </div>
+                <label for="aenDat" class="col-md-3 col-form-label">AEN_DAT</label>
+                <div class="col-md-3 input-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="$ctrl.openDatepicker('aenDat')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                    <input id="aenDat"
+                           type="text"
+                           class="form-control"
+                           uib-datepicker-popup="dd.MM.yyyy"
+                           close-text="Schließen"
+                           clear-text="Leeren"
+                           current-text="Heute"
+                           ng-model="$ctrl.model.AEN_DAT"
+                           is-open="$ctrl.aenDat.opened"
+                           ng-required="true" />
+                </div>
+            </div>
+            <div class="row form-group">
+                <label for="aenBen" class="col-md-3 col-form-label">AEN_BEN</label>
+                <div class="col-md-3">
+                    <input id="aenBen" type="text" required maxlength="5" class="form-control" ng-model="$ctrl.model.AEN_BEN" />
+                </div>
+                <label for="mngKgEing" class="col-md-3 col-form-label">MNG_KG_EING</label>
+                <div class="col-md-3">
+                    <input id="mngKgEing" type="number" min="0" step="0.01" required class="form-control" ng-model="$ctrl.model.MNG_KG_EING" />
                 </div>
             </div>
         </div>
         <div class="modal-footer">
             <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Abbrechen</button>
-            <button class="btn btn-primary" type="submit">Buchen</button>
+            <button class="btn btn-danger" type="button" ng-hide="!$ctrl.model.RECNUM" ng-click="$ctrl.reversal()">Storno</button>
+            <button class="btn btn-primary" type="submit" ng-hide="$ctrl.model.RECNUM">Buchen</button>
         </div>
     </form>
 </script>

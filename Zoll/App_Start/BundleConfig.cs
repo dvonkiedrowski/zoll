@@ -17,9 +17,15 @@ namespace Zoll
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                         "~/Scripts/moment.min.js",
                         "~/Scripts/angular.min.js",
+                        "~/Scripts/angular-messages.min.js",
+                        "~/Scripts/ng-fab-form.min.js",
                         "~/Scripts/i18n/angular-locale_de-de.js",
                         "~/Scripts/angular-ui/ui-bootstrap.min.js",
                         "~/Scripts/angular-ui/ui-bootstrap-tpls.min.js",
+                        "~/Scripts/data-grid/dataGrid.min.js",
+                        "~/Scripts/data-grid/dataGridUtils.min.js",
+                        "~/Scripts/data-grid/loading-bar.min.js",
+                        "~/Scripts/data-grid/pagination.min.js",
                         "~/Scripts/app/module.js",
                         "~/Scripts/app/controller.js",
                         "~/Scripts/app/modalController.js"));
@@ -35,6 +41,8 @@ namespace Zoll
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/ngFabForm/style.css",
+                      "~/Content/data-grid/fixed-header.css",
                       "~/Content/site.css"));
         }
     }

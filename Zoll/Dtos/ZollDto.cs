@@ -5,6 +5,8 @@ namespace Zoll
     
     public partial class ZollDto : BaseDto
     {
+        public int MANDANT { get; set; }
+
         public int LIEF_FIL { get; set; }
         
         public DateTime LIEF_DAT { get; set; }
