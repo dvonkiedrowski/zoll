@@ -29,3 +29,11 @@ textarea {
     margin-bottom: 0;
     line-height: 1.5;
 }
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.overflow-x {
+    overflow-x: auto;
+}

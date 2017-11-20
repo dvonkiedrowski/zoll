@@ -1,11 +1,11 @@
 ﻿<div ng-controller="controller as $ctrl">
-    <div class="row">
+    <div class="row form-group margin-top-10">
         <div class="col-md-12">
-            <button ng-click="$ctrl.openModal({})" class="btn btn-primary">Neue Buchung</button>
+            <button ng-click="$ctrl.openModal({})" class="btn btn-primary pull-right">Neue Buchung</button>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
+    <div class="row form-group">
+        <div class="col-md-12 overflow-x">
             <div grid-data id='test' grid-options="$ctrl.gridOptions" grid-actions="gridActions">
                 <table class="table table-bordered table-striped">
                     <thead>
@@ -13,6 +13,21 @@
                             <th sortable="LIEF_FIL_Ref.BEZ" class="sortable">LIEF_FIL</th>
                             <th sortable="LIEF_DAT" class="sortable">LIEF_DAT</th>
                             <th sortable="LIEF_NR" class="sortable">LIEF_NR</th>
+                            <th sortable="KU_NR" class="sortable">KU_NR</th>
+                            <th sortable="KU_TA_LFD_NR" class="sortable">KU_TA_LFD_NR</th>
+                            <th sortable="KU_FL_LFD_NR" class="sortable">KU_FL_LFD_NR</th>
+                            <th sortable="RECH_DAT" class="sortable">RECH_DAT</th>
+                            <th sortable="RECH_NR" class="sortable">RECH_NR</th>
+                            <th sortable="MIN_STEUER_KZ" class="sortable">MIN_STEUER_KZ</th>
+                            <th sortable="ZOLL_KZ" class="sortable">ZOLL_KZ</th>
+                            <th sortable="MNG_KG_AUSG" class="sortable">MNG_KG_AUSG</th>
+                            <th sortable="LAGER_KZ" class="sortable">LAGER_KZ</th>
+                            <th sortable="ZOLL_LIEF_KZ" class="sortable">ZOLL_LIEF_KZ</th>
+                            <th sortable="CUBEWARE_KZ" class="sortable">CUBEWARE_KZ</th>
+                            <th sortable="ANG_BEN" class="sortable">ANG_BEN</th>
+                            <th sortable="AEN_DAT" class="sortable">AEN_DAT</th>
+                            <th sortable="AEN_BEN" class="sortable">AEN_BEN</th>
+                            <th sortable="MNG_KG_EING" class="sortable">MNG_KG_EING</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -20,10 +35,25 @@
                             <td ng-bind="item.LIEF_FIL_Ref.BEZ"></td>
                             <td ng-bind="item.LIEF_DAT | date:'dd.MM.yyyy'"></td>
                             <td ng-bind="item.LIEF_NR"></td>
+                            <td ng-bind="item.KU_NR"></td>
+                            <td ng-bind="item.KU_TA_LFD_NR"></td>
+                            <td ng-bind="item.KU_FL_LFD_NR"></td>
+                            <td ng-bind="item.RECH_DAT | date:'dd.MM.yyyy'"></td>
+                            <td ng-bind="item.RECH_NR"></td>
+                            <td ng-bind="item.MIN_STEU_Ref.BEZ"></td>
+                            <td ng-bind="item.ZOLL_KZ"></td>
+                            <td ng-bind="item.MNG_KG_AUSG | number:2"></td>
+                            <td ng-bind="item.LAGER_KZ"></td>
+                            <td ng-bind="item.ZOLL_LIEF_KZ"></td>
+                            <td ng-bind="item.CUBEWARE_KZ"></td>
+                            <td ng-bind="item.ANG_BEN"></td>
+                            <td ng-bind="item.AEN_DAT | date:'dd.MM.yyyy'"></td>
+                            <td ng-bind="item.AEN_BEN"></td>
+                            <td ng-bind="item.MNG_KG_EING | number:2"></td>
                         </tr>
                     </tbody>
                 </table>
-                <form class="form-inline pull-right margin-bottom-basic">
+                <form class="form-inline margin-bottom-basic">
                     <div class="form-group">
                         <grid-pagination max-size="5"
                                          boundary-links="true"
@@ -62,20 +92,22 @@
                     <select id="liefFil" class="form-control" required ng-model="$ctrl.model.LIEF_FIL" ng-options="c.RECNUM as c.BEZ for c in $ctrl.dependencies.Filialen"></select>
                 </div>
                 <label for="liefDat" class="col-md-3 col-form-label">LIEF_DAT</label>
-                <div class="col-md-3 input-group">
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ng-click="$ctrl.openDatepicker('liefDat')"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                    <input id="liefDat"
-                           type="text"
-                           class="form-control"
-                           uib-datepicker-popup="dd.MM.yyyy"
-                           close-text="Schließen"
-                           clear-text="Leeren"
-                           current-text="Heute"
-                           ng-model="$ctrl.model.LIEF_DAT"
-                           is-open="$ctrl.liefDat.opened"
-                           ng-required="true" />
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="$ctrl.openDatepicker('liefDat')"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                        <input id="liefDat"
+                               type="text"
+                               class="form-control"
+                               uib-datepicker-popup="dd.MM.yyyy"
+                               close-text="Schließen"
+                               clear-text="Leeren"
+                               current-text="Heute"
+                               ng-model="$ctrl.model.LIEF_DAT"
+                               is-open="$ctrl.liefDat.opened"
+                               ng-required="true" />
+                    </div>
                 </div>
             </div>
             <div class="row form-group">
@@ -100,20 +132,22 @@
             </div>
             <div class="row form-group">
                 <label for="rechDat" class="col-md-3 col-form-label">RECH_DAT</label>
-                <div class="col-md-3 input-group">
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ng-click="$ctrl.openDatepicker('rechDat')"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                    <input id="rechDat"
-                           type="text"
-                           class="form-control"
-                           uib-datepicker-popup="dd.MM.yyyy"
-                           close-text="Schließen"
-                           clear-text="Leeren"
-                           current-text="Heute"
-                           ng-model="$ctrl.model.RECH_DAT"
-                           is-open="$ctrl.rechDat.opened"
-                           ng-required="true" />
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="$ctrl.openDatepicker('rechDat')"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                        <input id="rechDat"
+                               type="text"
+                               class="form-control"
+                               uib-datepicker-popup="dd.MM.yyyy"
+                               close-text="Schließen"
+                               clear-text="Leeren"
+                               current-text="Heute"
+                               ng-model="$ctrl.model.RECH_DAT"
+                               is-open="$ctrl.rechDat.opened"
+                               ng-required="true" />
+                    </div>
                 </div>
                 <label for="rechNr" class="col-md-3 col-form-label">RECH_NR</label>
                 <div class="col-md-3">
@@ -156,20 +190,22 @@
                     <input id="angBen" type="text" required maxlength="5" class="form-control" ng-model="$ctrl.model.ANG_BEN" />
                 </div>
                 <label for="aenDat" class="col-md-3 col-form-label">AEN_DAT</label>
-                <div class="col-md-3 input-group">
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ng-click="$ctrl.openDatepicker('aenDat')"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                    <input id="aenDat"
-                           type="text"
-                           class="form-control"
-                           uib-datepicker-popup="dd.MM.yyyy"
-                           close-text="Schließen"
-                           clear-text="Leeren"
-                           current-text="Heute"
-                           ng-model="$ctrl.model.AEN_DAT"
-                           is-open="$ctrl.aenDat.opened"
-                           ng-required="true" />
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="$ctrl.openDatepicker('aenDat')"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                        <input id="aenDat"
+                               type="text"
+                               class="form-control"
+                               uib-datepicker-popup="dd.MM.yyyy"
+                               close-text="Schließen"
+                               clear-text="Leeren"
+                               current-text="Heute"
+                               ng-model="$ctrl.model.AEN_DAT"
+                               is-open="$ctrl.aenDat.opened"
+                               ng-required="true" />
+                    </div>
                 </div>
             </div>
             <div class="row form-group">
