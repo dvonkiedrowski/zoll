@@ -10,12 +10,13 @@ namespace Zoll
     {
         public int MIN_STEUER_KZ { get; set; }
 
-        public int OLGA_STEUER_KZ { get; set; }
+        [StringLength(2)]
+        public string OLGA_STEUER_KZ { get; set; }
 
         public int HAN_STEUER_KZ { get; set; }
 
         [StringLength(30)]
-        public string BEZ { get; set; }
+        public string BEZEICHNUNG { get; set; }
 
         [Column(TypeName = "numeric")]
         public decimal BETRAG_TO { get; set; }

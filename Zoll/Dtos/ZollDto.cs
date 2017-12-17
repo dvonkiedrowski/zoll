@@ -1,4 +1,4 @@
-namespace Zoll
+namespace Zoll.Dtos
 {
     using global::Zoll.Dtos.Base;
     using System;

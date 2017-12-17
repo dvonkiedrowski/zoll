@@ -37,7 +37,7 @@ namespace Zoll
                 .IsUnicode(false);
 
             modelBuilder.Entity<Min_Steu>()
-                .Property(e => e.BEZ)
+                .Property(e => e.BEZEICHNUNG)
                 .IsFixedLength()
                 .IsUnicode(false);
 

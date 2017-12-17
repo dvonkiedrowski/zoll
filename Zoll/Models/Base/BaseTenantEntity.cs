@@ -7,7 +7,6 @@ namespace Zoll.Models.Base
     {
         public int MANDANT { get; set; }
 
-        [ForeignKey("MANDANT")]
-        public virtual Mandant MANDANT_Ref { get; set; }
+      
     }
 }

@@ -7,13 +7,13 @@ namespace Zoll.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Zollein : IMigrationMetadata
+    public sealed partial class Zollein01 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Zollein));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Zollein01));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712171448168_Zollein"; }
+            get { return "201712171555367_Zollein01"; }
         }
         
         string IMigrationMetadata.Source

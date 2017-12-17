@@ -40,7 +40,7 @@
                             <td ng-bind="item.KU_FL_LFD_NR"></td>
                             <td ng-bind="item.RECH_DAT | date:'dd.MM.yyyy'"></td>
                             <td ng-bind="item.RECH_NR"></td>
-                            <td ng-bind="item.MIN_STEU_Ref.BEZ"></td>
+                            <td ng-bind="item.MIN_STEU_Ref.BEZEICHNUNG"></td>
                             <td ng-bind="item.ZOLL_KZ"></td>
                             <td ng-bind="item.MNG_KG_AUSG | number:2"></td>
                             <td ng-bind="item.LAGER_KZ"></td>
@@ -157,7 +157,7 @@
             <div class="row form-group">
                 <label for="minSteuKz" class="col-md-3 col-form-label">MIN_STEUER_KZ</label>
                 <div class="col-md-3">
-                    <select id="minSteuKz" class="form-control" required ng-model="$ctrl.model.MIN_STEUER_KZ" ng-options="c.RECNUM as c.BEZ for c in $ctrl.dependencies.Min_Steus"></select>
+                    <select id="minSteuKz" class="form-control" required ng-model="$ctrl.model.MIN_STEUER_KZ" ng-options="c.RECNUM as c.BEZEICHNUNG for c in $ctrl.dependencies.Min_Steus"></select>
                 </div>
                 <label for="zollKz" class="col-md-3 col-form-label">ZOLL_KZ</label>
                 <div class="col-md-3">

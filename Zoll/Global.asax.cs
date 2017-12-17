@@ -4,6 +4,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Zoll.Dtos;
 using Zoll.Dtos.Base;
 
 namespace Zoll
@@ -16,7 +17,7 @@ namespace Zoll
                 cfg.CreateMap<Zoll, ZollDto>();
                 cfg.CreateMap<ZollDto, Zoll>();
                 cfg.CreateMap<Filiale, BaseDtoWithName>();
-                cfg.CreateMap<Min_Steu, BaseDtoWithName>();
+                cfg.CreateMap<Min_Steu, MinSteuDto>();
             });
 
             AreaRegistration.RegisterAllAreas();

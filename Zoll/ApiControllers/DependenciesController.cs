@@ -16,7 +16,7 @@ namespace Zoll.ApiControllers
             DependenciesDto result = new DependenciesDto();
             using (var context = new ZollContext())
             {
-                result.Min_Steus = Mapper.Map<IEnumerable<Min_Steu>, IEnumerable<BaseDtoWithName>>(context.MIN_STEU as IEnumerable<Min_Steu>);
+                result.Min_Steus = Mapper.Map<IEnumerable<Min_Steu>, IEnumerable<MinSteuDto>>(context.MIN_STEU as IEnumerable<Min_Steu>);
                 result.Filialen = Mapper.Map<IEnumerable<Filiale>, IEnumerable<BaseDtoWithName>>(context.FILIALE as IEnumerable<Filiale>);
             }
             return result;

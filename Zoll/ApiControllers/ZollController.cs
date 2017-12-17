@@ -2,6 +2,7 @@
 using System;
 using System.Web.Http;
 using Zoll.ApiControllers.Base;
+using Zoll.Dtos;
 
 namespace Zoll.ApiControllers
 {
