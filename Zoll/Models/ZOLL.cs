@@ -5,7 +5,7 @@ namespace Zoll
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    [Table("ZOLL")]
+    [Table("ZOLLEIN")]
     public partial class Zoll : BaseTenantEntity
     {
         public int LIEF_FIL { get; set; }

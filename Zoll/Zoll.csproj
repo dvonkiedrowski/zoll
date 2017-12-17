@@ -186,6 +186,10 @@
     <Compile Include="Migrations\201711151759204_ChangeBEZEICHNUNGToBEZ.Designer.cs">
       <DependentUpon>201711151759204_ChangeBEZEICHNUNGToBEZ.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712171448168_Zollein.cs" />
+    <Compile Include="Migrations\201712171448168_Zollein.Designer.cs">
+      <DependentUpon>201712171448168_Zollein.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Base\BaseTenantEntity.cs" />
     <Compile Include="Models\Base\BaseEntity.cs" />
@@ -1061,6 +1065,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711151759204_ChangeBEZEICHNUNGToBEZ.resx">
       <DependentUpon>201711151759204_ChangeBEZEICHNUNGToBEZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712171448168_Zollein.resx">
+      <DependentUpon>201712171448168_Zollein.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
